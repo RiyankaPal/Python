@@ -1,4 +1,4 @@
-#Hello World!**
+#Hello World!
 
 Here is our first Python Program:
 ## Code Breakdown
