@@ -14,10 +14,10 @@ Given the participants' score sheet for your University Sports Day, you are requ
 ## Output Format
 Print the runner-up score.
 
-'''' Sample Input:
+''' Sample Input:
 5
 2 3 6 6 5
-''''
+'''
 ```
 Sample Output :
 5
@@ -29,6 +29,7 @@ Given list is `[2,3,6,6,5]`. The maximum score is 6, second maximum is 5. Hence,
 
 
 ##Solution
+
 ```python
 if __name__ == '__main__':
     n = int(input())
