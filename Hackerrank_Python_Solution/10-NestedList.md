@@ -48,6 +48,26 @@ There are 5 students in this class whose names and grades are assembled to build
 python students = [[‘Harry’, 37.21], [‘Berry’, 37.21], [‘Tina’, 37.2], [‘Akriti’, 41], [‘Harsh’, 39]]
 The lowest grade of 37.2 belongs to Tina. The second lowest grade of 37.21 belongs to both Harry and Berry, so we order their names alphabetically and print each name on a new line.
 
+## Solution
+
+```python
+if __name__ == '__main__':
+    Name=[]
+    Score=[]
+    for _ in range(int(input())):
+        name = input()
+        Name.append(name)
+        score = float(input())
+        Score.append(score)
+    records=[[Name, Score] for Name, Score in zip(Name, Score)]
+    Scores=(record[1] for record in records)
+    unique_score=sorted(set(Scores))
+    Second_lowest_score=unique_score[1]
+    Student_with_second_lowest=sorted([record[0] for record in records if record[1]==Second_lowest_score])
+    for students in Student_with_second_lowest:
+        print(students)
+```
+
 
 
 
