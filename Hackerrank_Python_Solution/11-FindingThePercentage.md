@@ -73,5 +73,19 @@ if __name__ == '__main__':
     print(formatted_average)
 ```
 
+## Explanation 
+1. Access Scores:
+marks= students_scores.get(query_name, []) retrieves the list of scores for the key stored in query_name. If that key is not in the dictionary, it returns an empty list.
+2. Check for Scores:
+Ensure that scores is not empty before proceeding with calculations.
+3. Calculate Total Sum, Number of Scores, and Average:
+-Sum of Scores:
+total = sum(marks) calculates the sum of the list.
+-count:
+count= len(marks) finds out how many scores there are.
+Calculate the Average:
+average = total / count computes the average.
+Output:
+-The print statements display the scores, sum, and average, with the average formatted to two decimal places.
 
 
