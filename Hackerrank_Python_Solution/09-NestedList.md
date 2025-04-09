@@ -59,14 +59,34 @@ if __name__ == '__main__':
         Name.append(name)
         score = float(input())
         Score.append(score)
-    records=[[Name, Score] for Name, Score in zip(Name, Score)]
-    Scores=(record[1] for record in records)
+    records=[[name, score] for name, score in zip(Name, Score)]
+    Scores=[record[1] for record in records]
     unique_score=sorted(set(Scores))
     Second_lowest_score=unique_score[1]
     Student_with_second_lowest=sorted([record[0] for record in records if record[1]==Second_lowest_score])
     for students in Student_with_second_lowest:
         print(students)
 ```
+#### EXPLANATION:
+- `zip(Name, Score)`:<br>
+Uses zip() to pair each name with its corresponding score.<br>
+Creates a list of lists, like:<br>
+ [[‘Harry’, 37.21], [‘Berry’, 37.21], [‘Tina’, 37.2], [‘Akriti’, 41], [‘Harsh’, 39]]
+
+- `[record[1] for record in records]`: <br>
+This pulls out only the scores from records.<br>
+<B>NOTE:</B>
+if we use (record[1] for record in records) this will works as a generator.means That works the first time we iterate over it,
+❌ But if we try to reuse Scores after that, it would be empty, because generators can be exhausted.
+```PYTHON
+Scores = (record[1] for record in records)
+print(list(Scores))  # Works ✅
+print(list(Scores))  # Empty ❌
+```
+
+- `for _ in range(int(input())): `<br>
+Asks the user how many students they want to enter (e.g., 3), and loops that many times.<br> _ is a placeholder variable when the loop variable itself isn’t used.
+
 
 
 

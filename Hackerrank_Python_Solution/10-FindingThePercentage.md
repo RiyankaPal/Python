@@ -75,19 +75,31 @@ if __name__ == '__main__':
 
 ## Explanation 
 
+` name, *line = input().split():`
+- Takes a line of input and splits it by spaces.<br> 
+- The first value goes into name (student's name).<br>
+- The rest go into line as a list (student's scores).<br>
+```
+input().split()  → ['Alice', '85', '90', '95']
+name             → 'Alice'
+*line            → ['85', '90', '95']
+
+```
+`scores = list(map(float, line)):`
+Converts each score in line from string to float and stores it in a list called scores.
 ## Access Scores:
-marks= students_scores.get(query_name, []) retrieves the list of scores for the key stored in query_name. If that key is not in the dictionary, it returns an empty list.
-## Check for Scores:
+marks= students_scores.get(query_name, []) retrieves the list of scores for the key stored in query_name. If that key is not in the dictionary, it returns an empty list.<br>
+## Check for Scores:<br>
 Ensure that scores is not empty before proceeding with calculations.
-## Calculate Total Sum, Number of Scores, and Average:
-- **Sum of Scores**:
-total = sum(marks) calculates the sum of the list.
+## Calculate Total Sum, Number of Scores, and Average:<br>
+- **Sum of Scores**:<br>
+total = sum(marks) calculates the sum of the list.<br>
 
-- **count**:
-count= len(marks) finds out how many scores there are.
+- **count**:<br>
+count= len(marks) finds out how many scores there are.<br>
 
-- **Calculate the Average**:
-average = total / count computes the average.
+- **Calculate the Average**:<br>
+average = total / count computes the average.<br>
 
 ## Output:
 The print statements display the scores, sum, and average, with the average formatted to two decimal places.
